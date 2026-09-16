@@ -1,0 +1,49 @@
+:root {
+  --pink: #e8177d;
+  --pink-soft: #fde6f1;
+  --ink: #2b2230;
+  --muted: #8a7f8f;
+  --line: #eadfe6;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  font: 16px/1.5 'Be Vietnam Pro', system-ui, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #fff5fa, #fff 40%);
+  min-height: 100dvh;
+}
+.wrap { max-width: 520px; margin: 0 auto; padding: 24px 16px calc(40px + env(safe-area-inset-bottom)); }
+h1 { font-size: 1.6rem; margin: 0 0 4px; text-align: center; }
+h1 span { font-family: 'Dancing Script', cursive; color: var(--pink); font-size: 2rem; }
+h2 { font-size: 1rem; margin: 0 0 12px; }
+.sub { color: var(--muted); text-align: center; margin: 0 0 20px; font-size: .9rem; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; margin-bottom: 16px; box-shadow: 0 4px 16px #e8177d0d; }
+label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 12px; border-left: 2px solid var(--pink); padding-left: 8px; }
+input, select {
+  display: block; width: 100%; margin-top: 4px; padding: 10px 12px;
+  font: inherit; font-size: 16px; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 10px; background: #fff;
+}
+input:focus, select:focus { outline: 2px solid var(--pink); outline-offset: -1px; }
+.row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+.row > input, .row > select { margin: 0; flex: 1; }
+.btn {
+  display: block; width: 100%; padding: 12px; border-radius: 999px;
+  font: inherit; font-weight: 600; text-align: center; text-decoration: none; cursor: pointer;
+  border: 1px solid var(--pink);
+}
+.btn.primary { background: var(--pink); color: #fff; margin-bottom: 12px; }
+.btn.ghost { background: #fff; color: var(--pink); }
+.btn.small { width: auto; padding: 10px 16px; flex: none; }
+.error { color: #c0152f; text-align: center; }
+.templates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+.templates button {
+  border: 2px solid var(--line); border-radius: 12px; background: #fff; padding: 6px;
+  font: inherit; font-size: .8rem; cursor: pointer;
+}
+.templates button[aria-pressed='true'] { border-color: var(--pink); background: var(--pink-soft); }
+.templates canvas { width: 100%; height: auto; display: block; margin-top: 4px; border-radius: 6px; }
+.qr { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 16px; }
+.link input { font-size: 13px; }

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <title>Gửi em 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/view.css" />
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+    <div id="center" class="center" hidden>
+      <img id="photo" class="photo" alt="" hidden />
+      <p id="heartText" class="heart-text"></p>
+    </div>
+    <button id="intro" class="intro" hidden>
+      <span class="gift">💝</span>
+      <span>Chạm để mở quà</span>
+    </button>
+    <div id="invalid" class="intro" hidden>
+      <span>Liên kết không hợp lệ 😢</span>
+      <a href="./">Tạo lời chúc mới</a>
+    </div>
+    <script type="module" src="/src/view.js"></script>
+  </body>
+</html>

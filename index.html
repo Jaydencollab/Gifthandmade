@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Tạo QR chúc mừng kỷ niệm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/creator.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Tạo QR chúc mừng <span>kỷ niệm</span> 💞</h1>
+      <p class="sub">Nhập lời chúc, tạo mã QR. Quét mã sẽ mở trang chữ, trái tim và mặt trăng rơi.</p>
+
+      <form id="form" novalidate>
+        <section class="card">
+          <h2>Lời nhắn</h2>
+          <div id="messages"></div>
+          <button type="button" id="addMsg" class="btn ghost">+ Thêm lời nhắn</button>
+        </section>
+
+        <section class="card">
+          <label>Chữ nền
+            <input name="bg" maxlength="20" placeholder="Ví dụ: I Love You" />
+          </label>
+          <label>Chữ trong trái tim
+            <input name="heart" maxlength="30" placeholder="Ví dụ: Kỷ niệm 1 năm" />
+          </label>
+          <label>Link ảnh (không bắt buộc)
+            <input name="img" type="url" inputmode="url" placeholder="https://..." />
+          </label>
+        </section>
+
+        <section class="card">
+          <h2>Nhạc</h2>
+          <div id="songPicker" class="row">
+            <select name="song"><option value="">— Không chọn —</option></select>
+            <button type="button" id="preview" class="btn ghost small">▶︎</button>
+          </div>
+          <label>Hoặc dán link mp3
+            <input name="musicUrl" type="url" inputmode="url" placeholder="https://.../bai-hat.mp3" />
+          </label>
+        </section>
+
+        <section class="card">
+          <h2>Chữ trên mã QR (mẫu trái tim)</h2>
+          <label>Chữ bên trên
+            <input name="top" maxlength="30" placeholder="Ví dụ: Đưa tay đây nào" />
+          </label>
+          <label>Chữ bên dưới
+            <input name="bottom" maxlength="30" placeholder="Ví dụ: Mãi bên nhau bạn nhé" />
+          </label>
+        </section>
+
+        <p id="error" class="error" hidden></p>
+        <button type="submit" class="btn primary">Tạo QR 💖</button>
+      </form>
+
+      <section id="result" class="card" hidden>
+        <h2>Chọn mẫu</h2>
+        <div id="templates" class="templates"></div>
+        <canvas id="qr" class="qr"></canvas>
+        <button type="button" id="download" class="btn primary">Tải QR Code 💾</button>
+        <div class="row link">
+          <input id="link" readonly />
+          <button type="button" id="copy" class="btn ghost small">Sao chép</button>
+        </div>
+        <a id="open" class="btn ghost" target="_blank" rel="noopener">Xem thử trang chúc mừng</a>
+      </section>
+    </main>
+    <script type="module" src="/src/creator.js"></script>
+  </body>
+</html>
